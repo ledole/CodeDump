@@ -1,0 +1,40 @@
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\bin\Debug\LSSvcGeneratorsTask.mcs
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\bin\Debug\LSResourceGeneratorsTask.mcs
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\bin\Debug\LSServerCodeGeneratorsTask.mcs
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\bin\Debug\Application.Server.dll.config
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\bin\Debug\Application.Server.dll
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\bin\Debug\Application.Server.pdb
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\bin\Debug\Microsoft.Data.Edm.dll
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\bin\Debug\Microsoft.Data.OData.dll
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\bin\Debug\Microsoft.Data.Services.Client.dll
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\bin\Debug\Microsoft.Data.Services.dll
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\bin\Debug\Microsoft.LightSwitch.AppBridge.dll
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\bin\Debug\Microsoft.LightSwitch.CodeMarker.dll
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\bin\Debug\Microsoft.LightSwitch.dll
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\bin\Debug\Microsoft.LightSwitch.ExportProvider.dll
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\bin\Debug\Microsoft.LightSwitch.Extensions.Server.dll
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\bin\Debug\Microsoft.LightSwitch.ManifestService.dll
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\bin\Debug\Microsoft.LightSwitch.Model.Xaml.dll
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\bin\Debug\Microsoft.LightSwitch.Server.dll
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\bin\Debug\Microsoft.LightSwitch.Server.Host.dll
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\bin\Debug\System.ServiceModel.DomainServices.EntityFramework.dll
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\bin\Debug\System.ServiceModel.DomainServices.Hosting.dll
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\bin\Debug\System.ServiceModel.DomainServices.Hosting.OData.dll
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\bin\Debug\System.ServiceModel.DomainServices.Server.dll
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\bin\Debug\System.ServiceModel.PollingDuplex.dll
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\bin\Debug\System.Spatial.dll
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\bin\Debug\Microsoft.WindowsAzure.ServiceRuntime.dll
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\bin\Debug\Microsoft.LightSwitch.xml
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\bin\Debug\Microsoft.LightSwitch.Server.xml
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\bin\Debug\System.ServiceModel.DomainServices.EntityFramework.xml
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\bin\Debug\System.ServiceModel.DomainServices.Hosting.xml
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\bin\Debug\System.ServiceModel.DomainServices.Hosting.OData.xml
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\bin\Debug\System.ServiceModel.DomainServices.Server.xml
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\obj\Debug\MobileDeviceTracking.Server.csprojResolveAssemblyReference.cache
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\obj\Debug\Application.Server.dll
+E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\obj\Debug\Application.Server.pdb
+C:\Users\Dz Baby\Documents\Visual Studio 2013\Projects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\obj\Debug\MobileDeviceTracking.Server.csprojResolveAssemblyReference.cache
+C:\Users\Dz Baby\Documents\Visual Studio 2013\Projects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\obj\Debug\Application.Server.dll
+C:\Users\Dz Baby\Documents\Visual Studio 2013\Projects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\obj\Debug\Application.Server.pdb

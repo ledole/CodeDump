@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" Namespace="LightSwitchApplication" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DisplayName" Type="Edm.String" MaxLength="255" />
+    <Property Name="FName" Type="Edm.String" MaxLength="255" />
+    <Property Name="LName" Type="Edm.String" MaxLength="255" />
+    <Property Name="UserName" Type="Edm.String" MaxLength="255" />
+    <Property Name="GID" Type="Edm.String" MaxLength="255" />
+    <Property Name="Email" Type="Edm.String" MaxLength="255" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="Devices" Relationship="LightSwitchApplication.Device_Customer" ToRole="Device" FromRole="Customer" />
+    <NavigationProperty Name="HwSwOrders" Relationship="LightSwitchApplication.HwSwOrder_Customer" ToRole="HwSwOrder" FromRole="Customer" />
+  </EntityType>
+  <EntityType Name="Device">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Device_MakeModel" Type="Edm.Int32" Nullable="false" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="IMEI" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="SIM" Type="Edm.String" MaxLength="255" />
+    <Property Name="Serial" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="PhoneNumber" Type="Edm.String" MaxLength="255" />
+    <Property Name="HwSwOrder_Device" Type="Edm.Int32" />
+    <Property Name="Device_Client" Type="Edm.Int32" />
+    <Property Name="Device_DeviceStatus" Type="Edm.Int32" Nullable="false" />
+    <Property Name="Device_StockLocation" Type="Edm.Int32" Nullable="false" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="MakeModel" Relationship="LightSwitchApplication.Device_MakeModel" ToRole="MakeModel" FromRole="Device" />
+    <NavigationProperty Name="HwSwOrder" Relationship="LightSwitchApplication.HwSwOrder_Device" ToRole="HwSwOrder" FromRole="Device" />
+    <NavigationProperty Name="Owner" Relationship="LightSwitchApplication.Device_Customer" ToRole="Customer" FromRole="Device" />
+    <NavigationProperty Name="DeviceStatus" Relationship="LightSwitchApplication.Device_DeviceStatus" ToRole="DeviceStatus" FromRole="Device" />
+    <NavigationProperty Name="StockLocation" Relationship="LightSwitchApplication.Device_StockLocation" ToRole="StockLocation" FromRole="Device" />
+  </EntityType>
+  <EntityType Name="DeviceStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="Active" Type="Edm.Boolean" Nullable="false" />
+    <Property Name="Description" Type="Edm.String" MaxLength="255" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="Devices" Relationship="LightSwitchApplication.Device_DeviceStatus" ToRole="Device" FromRole="DeviceStatus" />
+  </EntityType>
+  <EntityType Name="HwSwOrder">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderNumber" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="Address" Type="Edm.String" MaxLength="255" />
+    <Property Name="ChargeTo" Type="Edm.Int32" Nullable="false" />
+    <Property Name="ReqiresApps" Type="Edm.Boolean" Nullable="false" />
+    <Property Name="RequiresKit" Type="Edm.Boolean" Nullable="false" />
+    <Property Name="RequiresDevice" Type="Edm.Boolean" Nullable="false" />
+    <Property Name="TrackingNumber" Type="Edm.String" MaxLength="255" />
+    <Property Name="Shipped" Type="Edm.Boolean" />
+    <Property Name="HwSwOrder_Client" Type="Edm.Int32" Nullable="false" />
+    <Property Name="Requestor" Type="Edm.String" MaxLength="255" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="Devices" Relationship="LightSwitchApplication.HwSwOrder_Device" ToRole="Device" FromRole="HwSwOrder" />
+    <NavigationProperty Name="Customer" Relationship="LightSwitchApplication.HwSwOrder_Customer" ToRole="Customer" FromRole="HwSwOrder" />
+  </EntityType>
+  <EntityType Name="MakeModel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Make" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="Model" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="Carrier" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="Devices" Relationship="LightSwitchApplication.Device_MakeModel" ToRole="Device" FromRole="MakeModel" />
+  </EntityType>
+  <EntityType Name="StockLocation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="Address" Type="Edm.String" MaxLength="255" />
+    <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="Devices" Relationship="LightSwitchApplication.Device_StockLocation" ToRole="Device" FromRole="StockLocation" />
+  </EntityType>
+  <Association Name="Device_Customer">
+    <End Role="Customer" Type="LightSwitchApplication.Customer" Multiplicity="0..1" />
+    <End Role="Device" Type="LightSwitchApplication.Device" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Device">
+        <PropertyRef Name="Device_Client" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HwSwOrder_Customer">
+    <End Role="Customer" Type="LightSwitchApplication.Customer" Multiplicity="1" />
+    <End Role="HwSwOrder" Type="LightSwitchApplication.HwSwOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="HwSwOrder">
+        <PropertyRef Name="HwSwOrder_Client" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Device_DeviceStatus">
+    <End Role="DeviceStatus" Type="LightSwitchApplication.DeviceStatus" Multiplicity="1" />
+    <End Role="Device" Type="LightSwitchApplication.Device" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeviceStatus">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Device">
+        <PropertyRef Name="Device_DeviceStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HwSwOrder_Device">
+    <End Role="HwSwOrder" Type="LightSwitchApplication.HwSwOrder" Multiplicity="0..1" />
+    <End Role="Device" Type="LightSwitchApplication.Device" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HwSwOrder">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Device">
+        <PropertyRef Name="HwSwOrder_Device" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Device_MakeModel">
+    <End Role="MakeModel" Type="LightSwitchApplication.MakeModel" Multiplicity="1" />
+    <End Role="Device" Type="LightSwitchApplication.Device" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MakeModel">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Device">
+        <PropertyRef Name="Device_MakeModel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Device_StockLocation">
+    <End Role="StockLocation" Type="LightSwitchApplication.StockLocation" Multiplicity="1" />
+    <End Role="Device" Type="LightSwitchApplication.Device" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StockLocation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Device">
+        <PropertyRef Name="Device_StockLocation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ApplicationData" m:IsDefaultEntityContainer="true">
+    <EntitySet Name="Customers" EntityType="LightSwitchApplication.Customer" />
+    <EntitySet Name="Devices" EntityType="LightSwitchApplication.Device" />
+    <EntitySet Name="DeviceStatusSet" EntityType="LightSwitchApplication.DeviceStatus" />
+    <EntitySet Name="HwSwOrders" EntityType="LightSwitchApplication.HwSwOrder" />
+    <EntitySet Name="MakeModels" EntityType="LightSwitchApplication.MakeModel" />
+    <EntitySet Name="StockLocations" EntityType="LightSwitchApplication.StockLocation" />
+    <AssociationSet Name="Device_Customer" Association="LightSwitchApplication.Device_Customer">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="Device" EntitySet="Devices" />
+    </AssociationSet>
+    <AssociationSet Name="HwSwOrder_Customer" Association="LightSwitchApplication.HwSwOrder_Customer">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="HwSwOrder" EntitySet="HwSwOrders" />
+    </AssociationSet>
+    <AssociationSet Name="Device_DeviceStatus" Association="LightSwitchApplication.Device_DeviceStatus">
+      <End Role="DeviceStatus" EntitySet="DeviceStatusSet" />
+      <End Role="Device" EntitySet="Devices" />
+    </AssociationSet>
+    <AssociationSet Name="HwSwOrder_Device" Association="LightSwitchApplication.HwSwOrder_Device">
+      <End Role="HwSwOrder" EntitySet="HwSwOrders" />
+      <End Role="Device" EntitySet="Devices" />
+    </AssociationSet>
+    <AssociationSet Name="Device_MakeModel" Association="LightSwitchApplication.Device_MakeModel">
+      <End Role="MakeModel" EntitySet="MakeModels" />
+      <End Role="Device" EntitySet="Devices" />
+    </AssociationSet>
+    <AssociationSet Name="Device_StockLocation" Association="LightSwitchApplication.Device_StockLocation">
+      <End Role="StockLocation" EntitySet="StockLocations" />
+      <End Role="Device" EntitySet="Devices" />
+    </AssociationSet>
+    <FunctionImport Name="Microsoft_LightSwitch_GetCanInformation" ReturnType="Edm.String" m:HttpMethod="GET">
+      <Parameter Name="dataServiceMembers" Type="Edm.String" Mode="In" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application
+  Name="LightSwitchApplication.MobileDeviceTracking.DesktopClient" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <Application.Attributes>
+    <Partial />
+  </Application.Attributes>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Migrations" />
+      <DefaultScreen
+        Value="Migration">
+        <DefaultScreen.Attributes>
+          <ScreenParameterMapping
+            KeyProperty="Migrations/Properties[Id]"
+            ScreenParameter="Migration/Properties[MigrationsId]" />
+        </DefaultScreen.Attributes>
+      </DefaultScreen>
+    </EntityType.Attributes>
+  </EntityType>
+</Application>

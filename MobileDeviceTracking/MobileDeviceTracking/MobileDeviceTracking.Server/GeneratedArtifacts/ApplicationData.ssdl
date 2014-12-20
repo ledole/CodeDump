@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ApplicationDataStore" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ApplicationDataStore">
+    <EntitySet Name="Customers" EntityType="ApplicationDataStore.Customer" store:Type="Tables" Schema="dbo" Table="Customers" />
+    <EntitySet Name="Devices" EntityType="ApplicationDataStore.Device" store:Type="Tables" Schema="dbo" Table="Devices" />
+    <EntitySet Name="DeviceStatusSet" EntityType="ApplicationDataStore.DeviceStatus" store:Type="Tables" Schema="dbo" Table="DeviceStatusSet" />
+    <EntitySet Name="HwSwOrders" EntityType="ApplicationDataStore.HwSwOrder" store:Type="Tables" Schema="dbo" Table="HwSwOrders" />
+    <EntitySet Name="MakeModels" EntityType="ApplicationDataStore.MakeModel" store:Type="Tables" Schema="dbo" Table="MakeModels" />
+    <EntitySet Name="StockLocations" EntityType="ApplicationDataStore.StockLocation" store:Type="Tables" Schema="dbo" Table="StockLocations" />
+    <EntitySet Name="Migrations" EntityType="ApplicationDataStore.Migration" store:Type="Tables" Schema="dbo" Table="Migrations" />
+    <AssociationSet Name="Device_Customer" Association="ApplicationDataStore.Device_Customer">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="Device" EntitySet="Devices" />
+    </AssociationSet>
+    <AssociationSet Name="HwSwOrder_Customer" Association="ApplicationDataStore.HwSwOrder_Customer">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="HwSwOrder" EntitySet="HwSwOrders" />
+    </AssociationSet>
+    <AssociationSet Name="Device_DeviceStatus" Association="ApplicationDataStore.Device_DeviceStatus">
+      <End Role="DeviceStatus" EntitySet="DeviceStatusSet" />
+      <End Role="Device" EntitySet="Devices" />
+    </AssociationSet>
+    <AssociationSet Name="HwSwOrder_Device" Association="ApplicationDataStore.HwSwOrder_Device">
+      <End Role="HwSwOrder" EntitySet="HwSwOrders" />
+      <End Role="Device" EntitySet="Devices" />
+    </AssociationSet>
+    <AssociationSet Name="Device_MakeModel" Association="ApplicationDataStore.Device_MakeModel">
+      <End Role="MakeModel" EntitySet="MakeModels" />
+      <End Role="Device" EntitySet="Devices" />
+    </AssociationSet>
+    <AssociationSet Name="Device_StockLocation" Association="ApplicationDataStore.Device_StockLocation">
+      <End Role="StockLocation" EntitySet="StockLocations" />
+      <End Role="Device" EntitySet="Devices" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DisplayName" Type="nvarchar" MaxLength="255" />
+    <Property Name="FName" Type="nvarchar" MaxLength="255" />
+    <Property Name="LName" Type="nvarchar" MaxLength="255" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="255" />
+    <Property Name="GID" Type="nvarchar" MaxLength="255">
+      <UniqueIndexAnnotation xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </Property>
+    <Property Name="Email" Type="nvarchar" MaxLength="255" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Created" Type="datetimeoffset" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Modified" Type="datetimeoffset" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Device">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="255">
+      <UniqueIndexAnnotation xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </Property>
+    <Property Name="IMEI" Type="nvarchar" Nullable="false" MaxLength="255">
+      <UniqueIndexAnnotation xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </Property>
+    <Property Name="SIM" Type="nvarchar" MaxLength="255">
+      <UniqueIndexAnnotation xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </Property>
+    <Property Name="Serial" Type="nvarchar" Nullable="false" MaxLength="255">
+      <UniqueIndexAnnotation xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </Property>
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="255">
+      <UniqueIndexAnnotation xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </Property>
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Created" Type="datetimeoffset" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Modified" Type="datetimeoffset" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="Device_Client" Type="int" />
+    <Property Name="Device_DeviceStatus" Type="int" Nullable="false" />
+    <Property Name="HwSwOrder_Device" Type="int" />
+    <Property Name="Device_MakeModel" Type="int" Nullable="false" />
+    <Property Name="Device_StockLocation" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DeviceStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="255" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Created" Type="datetimeoffset" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Modified" Type="datetimeoffset" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="HwSwOrder">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OrderNumber" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Address" Type="nvarchar" MaxLength="255" />
+    <Property Name="ChargeTo" Type="int" Nullable="false" />
+    <Property Name="ReqiresApps" Type="bit" Nullable="false" />
+    <Property Name="RequiresKit" Type="bit" Nullable="false" />
+    <Property Name="RequiresDevice" Type="bit" Nullable="false" />
+    <Property Name="TrackingNumber" Type="nvarchar" MaxLength="255" />
+    <Property Name="Shipped" Type="bit" />
+    <Property Name="Requestor" Type="nvarchar" MaxLength="255" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Created" Type="datetimeoffset" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Modified" Type="datetimeoffset" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="HwSwOrder_Client" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MakeModel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Make" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Model" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Carrier" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Created" Type="datetimeoffset" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Modified" Type="datetimeoffset" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="StockLocation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Address" Type="nvarchar" MaxLength="255" />
+    <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Created" Type="datetimeoffset" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Modified" Type="datetimeoffset" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Migration">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MigNum" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Created" Type="datetimeoffset" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Modified" Type="datetimeoffset" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <Association Name="Device_Customer">
+    <End Role="Customer" Type="ApplicationDataStore.Customer" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Restrict" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Device" Type="ApplicationDataStore.Device" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Device">
+        <PropertyRef Name="Device_Client" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HwSwOrder_Customer">
+    <End Role="Customer" Type="ApplicationDataStore.Customer" Multiplicity="1">
+      <OnDeleteAnnotation Action="Restrict" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="HwSwOrder" Type="ApplicationDataStore.HwSwOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="HwSwOrder">
+        <PropertyRef Name="HwSwOrder_Client" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Device_DeviceStatus">
+    <End Role="DeviceStatus" Type="ApplicationDataStore.DeviceStatus" Multiplicity="1">
+      <OnDeleteAnnotation Action="Restrict" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Device" Type="ApplicationDataStore.Device" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeviceStatus">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Device">
+        <PropertyRef Name="Device_DeviceStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HwSwOrder_Device">
+    <End Role="HwSwOrder" Type="ApplicationDataStore.HwSwOrder" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Restrict" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Device" Type="ApplicationDataStore.Device" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HwSwOrder">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Device">
+        <PropertyRef Name="HwSwOrder_Device" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Device_MakeModel">
+    <End Role="MakeModel" Type="ApplicationDataStore.MakeModel" Multiplicity="1">
+      <OnDeleteAnnotation Action="Restrict" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Device" Type="ApplicationDataStore.Device" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MakeModel">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Device">
+        <PropertyRef Name="Device_MakeModel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Device_StockLocation">
+    <End Role="StockLocation" Type="ApplicationDataStore.StockLocation" Multiplicity="1">
+      <OnDeleteAnnotation Action="Restrict" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Device" Type="ApplicationDataStore.Device" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StockLocation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Device">
+        <PropertyRef Name="Device_StockLocation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

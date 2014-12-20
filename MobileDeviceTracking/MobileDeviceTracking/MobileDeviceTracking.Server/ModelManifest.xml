@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Documents>
+    <Document FullPath="E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\DataSources\ApplicationData\Customers.lsml" Checksum="4A0677C9F70860C7D4FDB1D20CDF42750C6347EE063A7758F86425D8282304D0" />
+    <Document FullPath="E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\DataSources\ApplicationData\Devices.lsml" Checksum="D45991D4384C9E925E3A6E876C33D58FD1746B7723A24082CFB75665DEE0F118" />
+    <Document FullPath="E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\DataSources\ApplicationData\DeviceStatusSet.lsml" Checksum="B63DC266C9AB3862D405D7E83FE88787B6789F8A466EA151B20806758FE6EC29" />
+    <Document FullPath="E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\DataSources\ApplicationData\HwSwOrders.lsml" Checksum="F3CEFE9C193DBD6E9123282DA3206B718B46472539529DD9BB9BFB51E62F1F73" />
+    <Document FullPath="E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\DataSources\ApplicationData\MakeModels.lsml" Checksum="5B6B6219D0D4A1AC9940853878A861BC279C3324C02B9EE1CD04F48E49245B31" />
+    <Document FullPath="E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\DataSources\ApplicationData\StockLocations.lsml" Checksum="0AA29C3A99944459F248DF0D919BCDB2D204BE4E3DA98FFC3CF8D5CA9678C53D" />
+    <Document FullPath="E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\Properties\DataSources\ApplicationData.lsml" Checksum="E6FEEAC3B4A850AAC5F0029259A0B9F8C1BD45F2950D17BD8D6664B9422E6AD6" />
+    <Document FullPath="E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.Server\Properties\Service.lsml" Checksum="679C78F29C5AF23E9956A773B0E46DF90F7B86CADA0B79571E5896A1C79F5B70" />
+  </Documents>
+</ModelDocumentManifest>

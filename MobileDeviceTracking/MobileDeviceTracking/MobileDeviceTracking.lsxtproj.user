@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <EnableENC>False</EnableENC>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <StartUpClientProject>MobileDeviceTracking.DesktopClient</StartUpClientProject>
+    <SchemaManagementLastSsdlWriteTime>635537566960088622</SchemaManagementLastSsdlWriteTime>
+    <SchemaManagementSchemaBuildState>1</SchemaManagementSchemaBuildState>
+    <EncryptedPublishConnectionString>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMyOmPKPWlE++zLcMRQQcAgAAAAACAAAAAAADZgAAwAAAABAAAAA5eCtYh8dLWMACPHgvNBiVAAAAAASAAACgAAAAEAAAAIdcgDyaHRXyIdKuApiUxC64AAAAaE+4NEm93pVqf4Y8x0ZrkDHgT8s+17kHPVbl73epxeEGINyrQa/H7N/m83e/bvbsoPYUzzlqRvYuHi+n3AAQvZPim5GNrdXtNSH9O/iIUDE4GK63JmQd+3SyoeAyagDfMbt8G+0h4p8iclCeVoHN+lUTZGV+FNPzemv2FLNYvTsWTOfMFqtIcbRwIb17dX4oUC7sJau/9g53cKvdkIJmvyc9wWlfMwzEKPab4PD8J8Z8EuuQ6Z2m8xQAAABvU29DERx0eDlC1claOphnckkvyQ==</EncryptedPublishConnectionString>
+    <EncryptedPublishSchemaConnectionString />
+    <EncryptedClientConnectionString>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMyOmPKPWlE++zLcMRQQcAgAAAAACAAAAAAADZgAAwAAAABAAAAA+mwypgCGwoOq0dPpX6U2sAAAAAASAAACgAAAAEAAAAHsxV+Ixz1uB8vg9LcQIWk64AAAAim2zEMFZfDU3hxrfcBc2UsGMLZ/9nxQkO8b5AjGh/0HpyQ2DU5dd8RLakhE2C3cnvpkHK0KX0S9cOioOY1WoWd93eNwfPzPrnCdc6LvrHYZZyJEKWEpbz6QEhYCubi/Gtw7D6MkWBLjXoV13BPXPYUuahoFz0dg0E4Bto2WdkxFxXtQswfBWc1bbLB/DQiasOEIbTJNzkLN6qOrxpjMhxrdFTLP+ES4UUvDY47LwngfiJ3muMF2x7hQAAAC3XMJ0n97mZ1UCfBImIfLLhug59w==</EncryptedClientConnectionString>
+    <EncryptedAdministratorPassword />
+    <PublishUserName />
+    <EncryptedPublishUserPassword />
+    <AzureSubscriptionId>00000000-0000-0000-0000-000000000000</AzureSubscriptionId>
+    <AzureManagementThumbprint />
+    <SharePointServerToServerCertificatePassword />
+    <SchemaManagementDatabaseIncludesSecurityObjects>True</SchemaManagementDatabaseIncludesSecurityObjects>
+    <GrantedPermissions>Microsoft.LightSwitch.Security:SecurityAdministration</GrantedPermissions>
+  </PropertyGroup>
+</Project>

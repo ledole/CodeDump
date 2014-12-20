@@ -1,0 +1,9 @@
+MobileDeviceTracking.Server.Properties.Service.lsml
+MobileDeviceTracking.Server.Properties.DataSources.ApplicationData.lsml
+MobileDeviceTracking.Server.DataSources.ApplicationData.HwSwOrders.lsml
+MobileDeviceTracking.Server.DataSources.ApplicationData.Devices.lsml
+MobileDeviceTracking.Server.DataSources.ApplicationData.Customers.lsml
+MobileDeviceTracking.Server.DataSources.ApplicationData.MakeModels.lsml
+MobileDeviceTracking.Server.DataSources.ApplicationData.DeviceStatusSet.lsml
+MobileDeviceTracking.Server.DataSources.ApplicationData.StockLocations.lsml
+MobileDeviceTracking.Server.DataSources.ApplicationData.MigrationsSet.lsml

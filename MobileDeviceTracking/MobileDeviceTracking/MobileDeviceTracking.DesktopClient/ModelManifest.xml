@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Documents>
+    <Document FullPath="E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.DesktopClient\Properties\ApplicationData\Customers.lsml" Checksum="CA2D87D39530BB1FEFEEF639EACF844517D707C6B45E66C2F0FA2AEDEB4ED164" />
+    <Document FullPath="E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.DesktopClient\Properties\Client.lsml" Checksum="FC098C7A731A56E00E2A5C26BBFD817E7429C9FE6645D5841618617F86713172" />
+    <Document FullPath="E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.DesktopClient\Properties\Proxies.lsml" Checksum="406C28547B1CAAD5739AC2787BB6989A3CAAF9DCA9D422C68953AB317EC8467A" />
+    <Document FullPath="E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.DesktopClient\Screens\HwSwOrdersListDetail.lsml" Checksum="36CD58424809F7B582DD723B54BB3FCFC35A9B823BA413C305E5A038FC6FB40D" />
+    <Document FullPath="E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.DesktopClient\Screens\CustomersListDetails.lsml" Checksum="EE736760D1297F94417E6BCC42F0724C89FA5270F11DA7E8A5E13EAC1C2BDDFE" />
+    <Document FullPath="E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.DesktopClient\Screens\CreateNewMakeModel.lsml" Checksum="C40794CA8337135415EA1B6A4CD99587B02D0520CDFC113D8019644DC0F75968" />
+    <Document FullPath="E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.DesktopClient\Screens\CreateNewDeviceStatus.lsml" Checksum="EB0C8F5BE3250E2582C93668BCD883AB3C141EC903333CFA34E81F1AA46F1F08" />
+    <Document FullPath="E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.DesktopClient\Screens\CreateNewStockLocation.lsml" Checksum="ADB1F3FBD7483ACD2C09F1075078CACBA7162F203BF066BA0FB5DC342E7286F9" />
+    <Document FullPath="E:\VsProjects\MobileDeviceTracking\MobileDeviceTracking\MobileDeviceTracking.DesktopClient\Screens\HwSwOrdersListDetail1.lsml" Checksum="427BF0A88753C0F32DBEFE52009DF803749024733EDC85ACE9E575DE0DD20B02" />
+  </Documents>
+</ModelDocumentManifest>
